@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Pagina.master.cs" Inherits="Controlador.Pagina" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Controlador Aereo</title>
+ <link rel="stylesheet" href="~/Styles/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  <header>
+     <div>
+         <img src="img/logo.jpg" alt="Logo" id="logo">
+     </div>
+     <nav>
+         <ul>
+             <li><a href="#">Inicio</a></li>
+             <li><a href="#">Acerca</a></li>
+             <li><a href="#">Servicios</a></li>
+             <li><a href="#">Contacto</a></li>
+         </ul>
+     </nav>
+     <div>
+         <button id="button">Iniciar sesion</button>
+     </div>
+ </header>
+
+ <div class="content">
+     <!-- Contenido de la página -->
+     <h1>Bienvenido</h1>
+     <p>Este es el contenido principal de tu página.</p>
+ </div>
+     <script>
+        // Obtén una referencia al botón mediante su ID
+        var button = document.getElementById('button');
+
+        // Agrega un controlador de eventos 'click' al botón
+        button.addEventListener('click', function() {
+            // Redirige a la página .aspx deseada al hacer clic en el botón
+            window.location.href = 'login.aspx';
+        });
+     </script>
+</body>
+</html>
